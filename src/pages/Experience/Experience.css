@@ -1,3 +1,357 @@
-.experience {
-  padding-top: 120px;
+/* ============================================
+   EXPERIENCE PAGE
+   ============================================ */
+
+/* Hero Banner */
+.experience__hero {
+  padding: 140px 0 80px;
+  text-align: center;
+}
+
+.experience__hero .section-description {
+  color: var(--color-gray-light);
+}
+
+/* ============================================
+   TIMELINE
+   ============================================ */
+
+.experience__timeline {
+  padding-bottom: 40px;
+}
+
+.experience__timeline-wrapper {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Center line */
+.experience__timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-cream-dark),
+    var(--color-primary),
+    var(--color-cream-dark)
+  );
+  transform: translateX(-50%);
+}
+
+/* Timeline Item */
+.experience__item {
+  position: relative;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.experience__item:last-child {
+  margin-bottom: 0;
+}
+
+.experience__item--left {
+  justify-content: flex-start;
+  padding-right: calc(50% + 40px);
+}
+
+.experience__item--right {
+  justify-content: flex-end;
+  padding-left: calc(50% + 40px);
+}
+
+/* Dot on timeline */
+.experience__dot {
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  transform: translateX(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-cream);
+  border: 3px solid var(--color-cream-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--color-primary);
+  z-index: 2;
+  transition: var(--transition-normal);
+}
+
+.experience__dot--active {
+  background-color: var(--color-primary);
+  border-color: var(--color-accent);
+  color: var(--color-white);
+  box-shadow: 0 0 0 6px rgba(107, 29, 42, 0.15);
+}
+
+/* Card */
+.experience__card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-cream-dark);
+  border-radius: var(--radius-md);
+  padding: 30px;
+  width: 100%;
+  transition: var(--transition-normal);
+  position: relative;
+}
+
+.experience__card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  border-color: var(--color-primary-light);
+}
+
+/* Current badge */
+.experience__badge {
+  display: inline-block;
+  padding: 4px 14px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+.experience__role {
+  font-size: 1.25rem;
+  margin-bottom: 4px;
+}
+
+.experience__company {
+  font-family: var(--font-accent);
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--color-accent);
+  margin-bottom: 14px;
+}
+
+.experience__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.experience__meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--color-gray);
+}
+
+.experience__type-badge {
+  padding: 3px 12px;
+  background-color: rgba(107, 29, 42, 0.07);
+  color: var(--color-primary);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-radius: 20px;
+}
+
+/* Responsibilities */
+.experience__responsibilities {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.experience__responsibilities li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--color-gray-dark);
+  line-height: 1.65;
+}
+
+.experience__check-icon {
+  color: var(--color-primary);
+  margin-top: 4px;
+  flex-shrink: 0;
+  font-size: 0.75rem;
+}
+
+/* ============================================
+   CERTIFICATES
+   ============================================ */
+
+.experience__certificates .section-header h2::after {
+  background-color: var(--color-cream);
+}
+
+.experience__cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.experience__cert-card {
+  background-color: rgba(242, 232, 220, 0.06);
+  border: 1px solid rgba(242, 232, 220, 0.1);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  transition: var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.experience__cert-card:hover {
+  background-color: rgba(242, 232, 220, 0.1);
+  border-color: var(--color-accent);
+  transform: translateY(-4px);
+}
+
+.experience__cert-icon {
+  width: 44px;
+  height: 44px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: var(--color-secondary);
+  flex-shrink: 0;
+}
+
+.experience__cert-title {
+  font-size: 1.05rem;
+  color: var(--color-cream);
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.experience__cert-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--color-gray-light);
+  margin-bottom: 10px;
+}
+
+.experience__cert-dot {
+  color: var(--color-accent);
+}
+
+.experience__cert-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.experience__cert-highlights li {
+  font-size: 0.84rem;
+  color: var(--color-cream-dark);
+  line-height: 1.6;
+  padding-left: 14px;
+  position: relative;
+}
+
+.experience__cert-highlights li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 5px;
+  height: 5px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+}
+
+.experience__cert-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-top: 8px;
+  transition: var(--transition-normal);
+}
+
+.experience__cert-link:hover {
+  color: var(--color-accent-light);
+  gap: 10px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  .experience__hero {
+    padding: 120px 0 60px;
+  }
+
+  /* Collapse timeline to single column */
+  .experience__timeline-line {
+    left: 22px;
+  }
+
+  .experience__item--left,
+  .experience__item--right {
+    padding-left: 70px;
+    padding-right: 0;
+    justify-content: flex-start;
+  }
+
+  .experience__dot {
+    left: 22px;
+    width: 38px;
+    height: 38px;
+    font-size: 0.85rem;
+  }
+
+  .experience__card {
+    padding: 22px;
+  }
+
+  .experience__cert-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .experience__meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience__item--left,
+  .experience__item--right {
+    padding-left: 58px;
+  }
+
+  .experience__dot {
+    width: 32px;
+    height: 32px;
+    font-size: 0.75rem;
+    left: 18px;
+  }
+
+  .experience__timeline-line {
+    left: 18px;
+  }
+
+  .experience__role {
+    font-size: 1.1rem;
+  }
 }
