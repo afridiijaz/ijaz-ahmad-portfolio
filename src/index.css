@@ -1,68 +1,318 @@
+/* ============================================
+   IJAZ AHMAD AFRIDI - PORTFOLIO
+   Maroon Bold Aesthetic Theme
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* === Maroon Bold Aesthetic Color Palette === */
+  --color-primary: #6B1D2A;
+  --color-primary-dark: #4A0E1C;
+  --color-primary-light: #8B2E3D;
+  --color-secondary: #1A0A0E;
+  --color-accent: #C9A84C;
+  --color-accent-light: #D4B96A;
+  --color-cream: #F2E8DC;
+  --color-cream-dark: #E8D5C4;
+  --color-white: #FFFFFF;
+  --color-black: #0D0507;
+  --color-gray: #8A8A8A;
+  --color-gray-light: #B8B8B8;
+  --color-gray-dark: #3A3A3A;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* === Typography === */
+  --font-heading: 'Playfair Display', 'Georgia', serif;
+  --font-body: 'Inter', 'Helvetica Neue', sans-serif;
+  --font-accent: 'Cormorant Garamond', 'Georgia', serif;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  /* === Spacing === */
+  --section-padding: 100px 0;
+  --container-width: 1200px;
+  --container-padding: 0 24px;
+
+  /* === Transitions === */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* === Shadows === */
+  --shadow-sm: 0 2px 8px rgba(107, 29, 42, 0.1);
+  --shadow-md: 0 4px 20px rgba(107, 29, 42, 0.15);
+  --shadow-lg: 0 8px 40px rgba(107, 29, 42, 0.2);
+  --shadow-xl: 0 12px 60px rgba(107, 29, 42, 0.25);
+
+  /* === Border Radius === */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+}
+
+/* === CSS Reset & Base === */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--color-secondary);
+  background-color: var(--color-cream);
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-secondary);
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h4 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
+
+p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-gray-dark);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-normal);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  border: none;
+  outline: none;
+  font-family: var(--font-body);
+  transition: var(--transition-normal);
 }
 
-@media (prefers-color-scheme: light) {
+input, textarea {
+  font-family: var(--font-body);
+  outline: none;
+  border: none;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* === Utility Classes === */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: var(--container-padding);
+}
+
+.section {
+  padding: var(--section-padding);
+}
+
+.section-dark {
+  background-color: var(--color-secondary);
+  color: var(--color-cream);
+}
+
+.section-dark h2,
+.section-dark h3,
+.section-dark h4 {
+  color: var(--color-cream);
+}
+
+.section-dark p {
+  color: var(--color-gray-light);
+}
+
+.section-maroon {
+  background-color: var(--color-primary);
+  color: var(--color-cream);
+}
+
+.section-maroon h2,
+.section-maroon h3,
+.section-maroon h4 {
+  color: var(--color-cream);
+}
+
+.section-maroon p {
+  color: var(--color-cream-dark);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header .section-subtitle {
+  font-family: var(--font-accent);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--color-accent);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.section-header h2 {
+  position: relative;
+  display: inline-block;
+}
+
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-accent);
+}
+
+.section-header .section-description {
+  max-width: 600px;
+  margin: 30px auto 0;
+  font-size: 1.05rem;
+}
+
+/* === Button Styles === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-normal);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  color: var(--color-secondary);
+  border: 2px solid var(--color-accent);
+}
+
+.btn-accent:hover {
+  background-color: var(--color-accent-light);
+  border-color: var(--color-accent-light);
+  transform: translateY(-2px);
+}
+
+.btn-light {
+  background-color: var(--color-cream);
+  color: var(--color-primary);
+  border: 2px solid var(--color-cream);
+}
+
+.btn-light:hover {
+  background-color: var(--color-white);
+  border-color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+/* === Decorative Elements === */
+.decorative-line {
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-accent);
+}
+
+.decorative-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+}
+
+/* === Scrollbar === */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-dark);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    --section-padding: 60px 0;
   }
-  a:hover {
-    color: #747bff;
+
+  .section-header {
+    margin-bottom: 40px;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.85rem;
   }
 }
