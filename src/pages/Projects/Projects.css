@@ -1,3 +1,358 @@
-.projects {
-  padding-top: 120px;
+/* ============================================
+   PROJECTS PAGE
+   ============================================ */
+
+/* Hero Banner */
+.projects__hero {
+  padding: 140px 0 80px;
+  text-align: center;
+}
+
+.projects__hero .section-description {
+  color: var(--color-gray-light);
+}
+
+/* Filter Bar */
+.projects__filters {
+  padding-top: 0;
+}
+
+.projects__filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.projects__filter-btn {
+  padding: 10px 24px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-gray-dark);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-cream-dark);
+  border-radius: 30px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+
+.projects__filter-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.projects__filter-btn--active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+.projects__filter-btn--active:hover {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+}
+
+/* Projects Grid */
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+/* ============================================
+   PROJECT CARD
+   ============================================ */
+
+.projects__card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-cream-dark);
+  transition: var(--transition-normal);
+}
+
+.projects__card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-6px);
+  border-color: transparent;
+}
+
+/* Card Visual / Top Section */
+.projects__card-visual {
+  position: relative;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 28px;
+  overflow: hidden;
+}
+
+.projects__card-period {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 4px 14px;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  color: var(--color-cream);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 20px;
+}
+
+.projects__card-title-overlay {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: rgba(242, 232, 220, 0.12);
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+/* Hover Overlay */
+.projects__card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(13, 5, 7, 0.85);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.projects__card:hover .projects__card-overlay {
+  opacity: 1;
+}
+
+.projects__card-overlay-btns {
+  display: flex;
+  gap: 14px;
+}
+
+.projects__overlay-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: var(--transition-normal);
+  background-color: var(--color-accent);
+  color: var(--color-secondary);
+}
+
+.projects__overlay-btn:hover {
+  background-color: var(--color-accent-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(201, 168, 76, 0.4);
+}
+
+.projects__overlay-btn--code {
+  background-color: transparent;
+  color: var(--color-cream);
+  border: 1.5px solid var(--color-cream-dark);
+}
+
+.projects__overlay-btn--code:hover {
+  background-color: var(--color-cream);
+  color: var(--color-secondary);
+  border-color: var(--color-cream);
+  box-shadow: 0 4px 15px rgba(242, 232, 220, 0.3);
+}
+
+/* Card Body */
+.projects__card-body {
+  padding: 28px;
+}
+
+/* Tags */
+.projects__card-tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.projects__card-tag {
+  padding: 3px 12px;
+  background-color: rgba(107, 29, 42, 0.07);
+  color: var(--color-primary);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  border-radius: 20px;
+}
+
+/* Title & Description */
+.projects__card-title {
+  font-size: 1.35rem;
+  margin-bottom: 4px;
+}
+
+.projects__card-tagline {
+  font-family: var(--font-accent);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--color-accent);
+  margin-bottom: 12px;
+}
+
+.projects__card-desc {
+  font-size: 0.9rem;
+  color: var(--color-gray-dark);
+  line-height: 1.75;
+  margin-bottom: 18px;
+}
+
+/* Features Chips */
+.projects__card-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.projects__card-feature {
+  padding: 5px 14px;
+  background-color: var(--color-cream);
+  color: var(--color-gray-dark);
+  font-size: 0.76rem;
+  font-weight: 500;
+  border-radius: 4px;
+  letter-spacing: 0.3px;
+}
+
+/* Tech Stack Icons */
+.projects__card-tech {
+  display: flex;
+  gap: 10px;
+  padding-top: 18px;
+  border-top: 1px solid var(--color-cream-dark);
+}
+
+.projects__card-tech-item {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-cream);
+  border-radius: 50%;
+  font-size: 1rem;
+  color: var(--color-primary);
+  transition: var(--transition-normal);
+}
+
+.projects__card-tech-item:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+
+.projects__cta {
+  padding: 80px 0;
+}
+
+.projects__cta-content {
+  text-align: center;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.projects__cta-content h2 {
+  color: var(--color-cream);
+  margin-bottom: 14px;
+}
+
+.projects__cta-content p {
+  color: var(--color-cream-dark);
+  font-size: 1.05rem;
+  margin-bottom: 28px;
+  line-height: 1.7;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 968px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects__hero {
+    padding: 120px 0 60px;
+  }
+
+  .projects__card-visual {
+    height: 180px;
+    padding: 22px;
+  }
+
+  .projects__card-title-overlay {
+    font-size: 1.5rem;
+  }
+
+  .projects__card-body {
+    padding: 22px;
+  }
+
+  .projects__card-overlay-btns {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .projects__overlay-btn {
+    padding: 10px 18px;
+    font-size: 0.82rem;
+  }
+
+  .projects__filter-bar {
+    gap: 8px;
+  }
+
+  .projects__filter-btn {
+    padding: 8px 18px;
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects__card-features {
+    gap: 6px;
+  }
+
+  .projects__card-feature {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+  }
+
+  .projects__card-tech-item {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
 }
