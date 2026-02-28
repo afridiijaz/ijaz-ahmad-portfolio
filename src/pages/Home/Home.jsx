@@ -12,6 +12,10 @@ const Home = () => {
       <div className="hero__bg-circle hero__bg-circle--1"></div>
       <div className="hero__bg-circle hero__bg-circle--2"></div>
 
+      {/* Sparkle Stars */}
+      <div className="hero__sparkle hero__sparkle--1"></div>
+      <div className="hero__sparkle hero__sparkle--2"></div>
+
       <div className="hero__container container">
         <div className="hero__content">
           {/* Left Content */}
@@ -37,7 +41,7 @@ const Home = () => {
               transition={{ delay: 0.4, duration: 0.7 }}
             >
               Ijaz Ahmad
-              <span className="hero__name-accent"> Afridi</span>
+              {/* <span className="hero__name-accent"> Ahmad</span> */}
             </motion.h1>
 
             <motion.div
@@ -111,7 +115,16 @@ const Home = () => {
           >
             <div className="hero__image-frame">
               <div className="hero__image-placeholder">
-                <span className="hero__image-initials">IA</span>
+                <img
+                  src="/pec photo.png"
+                  alt="Ijaz Ahmad"
+                  className="hero__profile-img"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'flex';
+                  }}
+                />
+                <span className="hero__image-initials" style={{ display: 'none' }}>IA</span>
               </div>
               <div className="hero__image-border"></div>
             </div>

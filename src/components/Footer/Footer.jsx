@@ -63,14 +63,14 @@ const Footer = () => {
                 <FaTwitter />
               </a>
               <a
-                href="mailto:ijazahmadafridi@gmail.com"
+                href="mailto:afridiijaz520@gmail.com"
                 className="footer__social-link"
                 aria-label="Email"
               >
                 <FaEnvelope />
               </a>
             </div>
-            <p className="footer__email">ijazahmadafridi@gmail.com</p>
+            <p className="footer__email">afridiijaz520@gmail.com</p>
           </div>
         </div>
 
