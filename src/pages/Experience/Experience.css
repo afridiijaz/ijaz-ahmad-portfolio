@@ -2,6 +2,14 @@
    EXPERIENCE PAGE
    ============================================ */
 
+.experience {
+  background-color: #0A0A0A;
+}
+
+.experience__timeline {
+  background-color: #0A0A0A;
+}
+
 /* Hero Banner */
 .experience__hero {
   padding: 140px 0 80px;
@@ -35,9 +43,11 @@
   width: 2px;
   background: linear-gradient(
     to bottom,
-    var(--color-cream-dark),
-    var(--color-primary),
-    var(--color-cream-dark)
+    transparent,
+    var(--color-pink),
+    var(--color-accent),
+    var(--color-pink),
+    transparent
   );
   transform: translateX(-50%);
 }
@@ -72,46 +82,47 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: var(--color-cream);
-  border: 3px solid var(--color-cream-dark);
+  background-color: #0A0A0A;
+  border: 2px solid var(--color-pink);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1rem;
-  color: var(--color-primary);
+  color: var(--color-accent);
   z-index: 2;
   transition: var(--transition-normal);
 }
 
 .experience__dot--active {
-  background-color: var(--color-primary);
-  border-color: var(--color-accent);
+  background: linear-gradient(135deg, var(--color-pink-dark), var(--color-primary));
+  border-color: var(--color-pink);
   color: var(--color-white);
-  box-shadow: 0 0 0 6px rgba(107, 29, 42, 0.15);
+  box-shadow: 0 0 0 6px rgba(233, 30, 99, 0.15);
 }
 
 /* Card */
 .experience__card {
-  background-color: var(--color-white);
-  border: 1px solid var(--color-cream-dark);
+  background-color: rgba(10, 10, 10, 0.9);
+  border: 1px solid rgba(233, 30, 99, 0.2);
   border-radius: var(--radius-md);
   padding: 30px;
   width: 100%;
   transition: var(--transition-normal);
   position: relative;
+  backdrop-filter: blur(8px);
 }
 
 .experience__card:hover {
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 6px 30px rgba(233, 30, 99, 0.15);
   transform: translateY(-4px);
-  border-color: var(--color-primary-light);
+  border-color: var(--color-pink);
 }
 
 /* Current badge */
 .experience__badge {
   display: inline-block;
   padding: 4px 14px;
-  background-color: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-pink-dark), var(--color-primary));
   color: var(--color-white);
   font-size: 0.7rem;
   font-weight: 700;
@@ -124,6 +135,7 @@
 .experience__role {
   font-size: 1.25rem;
   margin-bottom: 4px;
+  color: var(--color-cream);
 }
 
 .experience__company {
@@ -147,13 +159,13 @@
   align-items: center;
   gap: 6px;
   font-size: 0.8rem;
-  color: var(--color-gray);
+  color: var(--color-gray-light);
 }
 
 .experience__type-badge {
   padding: 3px 12px;
-  background-color: rgba(107, 29, 42, 0.07);
-  color: var(--color-primary);
+  background-color: rgba(233, 30, 99, 0.1);
+  color: var(--color-pink);
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -172,12 +184,12 @@
   align-items: flex-start;
   gap: 10px;
   font-size: 0.88rem;
-  color: var(--color-gray-dark);
+  color: var(--color-gray-light);
   line-height: 1.65;
 }
 
 .experience__check-icon {
-  color: var(--color-primary);
+  color: var(--color-pink);
   margin-top: 4px;
   flex-shrink: 0;
   font-size: 0.75rem;

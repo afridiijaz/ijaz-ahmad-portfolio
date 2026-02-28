@@ -2,6 +2,10 @@
    PROJECTS PAGE
    ============================================ */
 
+.projects {
+  background-color: #0A0A0A;
+}
+
 /* Hero Banner */
 .projects__hero {
   padding: 140px 0 80px;
@@ -31,28 +35,30 @@
   padding: 10px 24px;
   font-size: 0.88rem;
   font-weight: 600;
-  color: var(--color-gray-dark);
-  background-color: var(--color-white);
-  border: 1px solid var(--color-cream-dark);
+  color: var(--color-gray-light);
+  background-color: rgba(10, 10, 10, 0.8);
+  border: 1px solid rgba(233, 30, 99, 0.2);
   border-radius: 30px;
   letter-spacing: 0.5px;
   cursor: pointer;
   transition: var(--transition-normal);
+  backdrop-filter: blur(8px);
 }
 
 .projects__filter-btn:hover {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
+  border-color: var(--color-pink);
+  color: var(--color-pink);
 }
 
 .projects__filter-btn--active {
-  background-color: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-pink-dark), var(--color-primary));
   color: var(--color-white);
-  border-color: var(--color-primary);
+  border-color: var(--color-pink);
+  box-shadow: 0 4px 16px var(--color-pink-glow);
 }
 
 .projects__filter-btn--active:hover {
-  background-color: var(--color-primary-dark);
+  background: linear-gradient(135deg, var(--color-pink), var(--color-primary-light));
   color: var(--color-white);
 }
 
@@ -68,18 +74,18 @@
    ============================================ */
 
 .projects__card {
-  background-color: var(--color-white);
+  background-color: rgba(10, 10, 10, 0.9);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--color-cream-dark);
+  border: 1px solid rgba(233, 30, 99, 0.18);
   transition: var(--transition-normal);
+  backdrop-filter: blur(8px);
 }
 
 .projects__card:hover {
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 8px 40px rgba(233, 30, 99, 0.18);
   transform: translateY(-6px);
-  border-color: transparent;
+  border-color: var(--color-pink);
 }
 
 /* Card Visual / Top Section */
@@ -112,9 +118,10 @@
   font-family: var(--font-heading);
   font-size: 2rem;
   font-weight: 800;
-  color: rgba(242, 232, 220, 0.12);
+  color: rgba(242, 232, 220, 0.75);
   letter-spacing: 2px;
   line-height: 1;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
 }
 
 /* Hover Overlay */
@@ -190,8 +197,8 @@
 
 .projects__card-tag {
   padding: 3px 12px;
-  background-color: rgba(107, 29, 42, 0.07);
-  color: var(--color-primary);
+  background-color: rgba(233, 30, 99, 0.1);
+  color: var(--color-pink);
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.8px;
@@ -203,6 +210,7 @@
 .projects__card-title {
   font-size: 1.35rem;
   margin-bottom: 4px;
+  color: var(--color-cream);
 }
 
 .projects__card-tagline {
@@ -215,7 +223,7 @@
 
 .projects__card-desc {
   font-size: 0.9rem;
-  color: var(--color-gray-dark);
+  color: var(--color-gray-light);
   line-height: 1.75;
   margin-bottom: 18px;
 }
@@ -230,8 +238,9 @@
 
 .projects__card-feature {
   padding: 5px 14px;
-  background-color: var(--color-cream);
-  color: var(--color-gray-dark);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--color-gray-light);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   font-size: 0.76rem;
   font-weight: 500;
   border-radius: 4px;
@@ -243,7 +252,7 @@
   display: flex;
   gap: 10px;
   padding-top: 18px;
-  border-top: 1px solid var(--color-cream-dark);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .projects__card-tech-item {
@@ -252,17 +261,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-cream);
+  background-color: rgba(201, 168, 76, 0.08);
   border-radius: 50%;
   font-size: 1rem;
-  color: var(--color-primary);
+  color: var(--color-accent);
   transition: var(--transition-normal);
 }
 
 .projects__card-tech-item:hover {
-  background-color: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-pink-dark), var(--color-primary));
   color: var(--color-white);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--color-pink-glow);
 }
 
 /* ============================================
