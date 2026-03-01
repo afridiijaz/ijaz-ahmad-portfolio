@@ -14,6 +14,7 @@ import {
   SiExpress,
   SiNextdotjs,
   SiTailwindcss,
+  SiSocketdotio,
 } from 'react-icons/si';
 import './Projects.css';
 
@@ -76,7 +77,7 @@ const projects = [
     ],
     period: 'Apr 2025 – May 2025',
     liveUrl: null,
-    githubUrl: 'https://github.com/ijaz-ahmad-afridi/github-clone',
+    githubUrl: 'https://github.com/afridiijaz/githubclone',
     image: null,
     color: '#C9A84C',
   },
@@ -98,8 +99,8 @@ const projects = [
       'Responsive Design',
     ],
     period: 'Aug 2025',
-    liveUrl: null,
-    githubUrl: 'https://github.com/ijaz-ahmad-afridi/weather-app',
+    liveUrl: 'https://weather-app-eta-one-52kx7xoek0.vercel.app/',
+    githubUrl: 'https://github.com/afridiijaz/weatherApp',
     image: null,
     color: '#4A0E1C',
   },
@@ -120,10 +121,35 @@ const projects = [
       'Authentication',
     ],
     period: '2025',
-    liveUrl: null,
-    githubUrl: 'https://github.com/ijaz-ahmad-afridi/lottery-game',
+    liveUrl: 'https://lotterygame-tau.vercel.app/',
+    githubUrl: 'https://github.com/afridiijaz/lotterygame',
     image: null,
     color: '#8B2E3D',
+  },
+  {
+    id: 5,
+    title: 'Chat App',
+    tagline: 'Real-Time Chat with WebRTC & WebSockets',
+    description:
+      'A real-time chat application powered by WebRTC and WebSockets enabling instant peer-to-peer communication. Features live messaging, room-based conversations, and seamless connectivity with zero lag.',
+    tags: ['Full Stack'],
+    tech: [
+      { name: 'Node.js', icon: <FaNodeJs /> },
+      { name: 'Express.js', icon: <SiExpress /> },
+      { name: 'Socket.io', icon: <SiSocketdotio /> },
+      { name: 'React.js', icon: <FaReact /> },
+    ],
+    features: [
+      'WebRTC Integration',
+      'WebSocket Communication',
+      'Real-Time Messaging',
+      'Room-Based Chats',
+    ],
+    period: 'Aug-2024',
+    liveUrl: 'https://websocket-zw51.onrender.com/',
+    githubUrl: 'https://github.com/afridiijaz/websocket',
+    image: null,
+    color: '#1D3A6B',
   },
 ];
 
@@ -187,8 +213,8 @@ const Projects = () => {
                   key={project.id}
                   className="projects__card"
                   initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
+                  animate="visible"
+                  exit="hidden"
                   custom={idx}
                   variants={fadeInUp}
                   layout
