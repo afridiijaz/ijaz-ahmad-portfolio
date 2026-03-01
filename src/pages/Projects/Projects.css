@@ -154,32 +154,58 @@
   align-items: center;
   gap: 8px;
   padding: 12px 22px;
-  border-radius: var(--radius-sm);
+  border-radius: 30px;
   font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  transition: var(--transition-normal);
-  background-color: var(--color-accent);
-  color: var(--color-secondary);
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, var(--color-pink-dark), var(--color-primary));
+  color: var(--color-white);
+  border: 1px solid var(--color-pink);
+  box-shadow: 0 4px 16px rgba(233, 30, 99, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.projects__overlay-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.18), transparent);
+  transition: left 0.5s ease;
+}
+
+.projects__overlay-btn:hover::before {
+  left: 150%;
 }
 
 .projects__overlay-btn:hover {
-  background-color: var(--color-accent-light);
+  background: linear-gradient(135deg, var(--color-pink), var(--color-primary-light));
+  box-shadow: 0 6px 24px rgba(233, 30, 99, 0.5);
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(201, 168, 76, 0.4);
 }
 
 .projects__overlay-btn--code {
-  background-color: transparent;
+  background: transparent;
   color: var(--color-cream);
-  border: 1.5px solid var(--color-cream-dark);
+  border: 1.5px solid rgba(242, 232, 220, 0.5);
+  box-shadow: none;
+}
+
+.projects__overlay-btn--code::before {
+  display: none;
 }
 
 .projects__overlay-btn--code:hover {
-  background-color: var(--color-cream);
-  color: var(--color-secondary);
+  background: rgba(242, 232, 220, 0.1);
+  color: var(--color-white);
   border-color: var(--color-cream);
-  box-shadow: 0 4px 15px rgba(242, 232, 220, 0.3);
+  box-shadow: 0 4px 15px rgba(242, 232, 220, 0.15);
+  transform: translateY(-2px);
 }
 
 /* Card Body */

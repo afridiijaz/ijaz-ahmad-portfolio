@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 import {
   FaEnvelope,
   FaPhoneAlt,
@@ -46,12 +47,12 @@ const socials = [
   {
     icon: <FaLinkedinIn />,
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/ijaz-ahmad-afridi-46a0b5252',
+    href: 'https://www.linkedin.com/in/ijaz-ahmad-afridi-46a0b5252/',
   },
   {
     icon: <FaGithub />,
     label: 'GitHub',
-    href: 'https://github.com/ijaz-ahmad-afridi',
+    href: 'https://github.com/afridiijaz',
   },
   {
     icon: <FaWhatsapp />,
@@ -61,11 +62,12 @@ const socials = [
   {
     icon: <FaTwitter />,
     label: 'Twitter',
-    href: 'https://twitter.com',
+    href: 'https://x.com/IjazAhmad936',
   },
 ];
 
 const Contact = () => {
+  const formRef = useRef();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -73,6 +75,8 @@ const Contact = () => {
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -80,10 +84,29 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // For now, simulate submission. You can hook this up to EmailJS, Formspree, etc.
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 5000);
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setSending(true);
+    setError('');
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setSubmitted(true);
+          setSending(false);
+          setFormData({ name: '', email: '', subject: '', message: '' });
+          setTimeout(() => setSubmitted(false), 5000);
+        },
+        (err) => {
+          setSending(false);
+          setError('Failed to send message. Please try again or email me directly.');
+          console.error('EmailJS error:', err);
+        }
+      );
   };
 
   return (
@@ -188,7 +211,7 @@ const Contact = () => {
               custom={1}
               variants={fadeInUp}
             >
-              <form className="contact__form" onSubmit={handleSubmit}>
+              <form className="contact__form" ref={formRef} onSubmit={handleSubmit}>
                 <div className="contact__form-row">
                   <div className="contact__form-group">
                     <label htmlFor="name" className="contact__form-label">
@@ -257,16 +280,19 @@ const Contact = () => {
                 <button
                   type="submit"
                   className="btn btn-primary contact__form-btn"
-                  disabled={submitted}
+                  disabled={submitted || sending}
                 >
                   {submitted ? (
                     'Message Sent! ✓'
+                  ) : sending ? (
+                    'Sending...'
                   ) : (
                     <>
                       Send Message <FaPaperPlane />
                     </>
                   )}
                 </button>
+                {error && <p className="contact__form-error">{error}</p>}
               </form>
             </motion.div>
           </div>

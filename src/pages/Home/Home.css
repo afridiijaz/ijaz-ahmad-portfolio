@@ -187,6 +187,23 @@
   text-transform: uppercase;
 }
 
+/* Typewriter cursor */
+.hero__cursor {
+  display: inline-block;
+  color: var(--color-pink);
+  font-weight: 300;
+  margin-left: 2px;
+}
+
+.hero__cursor--blink {
+  animation: cursorBlink 1s step-end infinite;
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
 .hero__description {
   font-size: 1.05rem;
   color: var(--color-gray-light);

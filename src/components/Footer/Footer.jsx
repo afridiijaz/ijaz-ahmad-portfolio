@@ -36,7 +36,7 @@ const Footer = () => {
             <h4 className="footer__nav-title">Let's Connect</h4>
             <div className="footer__socials">
               <a
-                href="https://www.linkedin.com/in/ijaz-ahmad-afridi"
+                href="https://www.linkedin.com/in/ijaz-ahmad-afridi-46a0b5252/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer__social-link"
@@ -45,7 +45,7 @@ const Footer = () => {
                 <FaLinkedinIn />
               </a>
               <a
-                href="https://github.com/ijaz-ahmad-afridi"
+                href="https://github.com/afridiijaz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer__social-link"
@@ -54,7 +54,7 @@ const Footer = () => {
                 <FaGithub />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://x.com/IjazAhmad936"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer__social-link"
@@ -80,7 +80,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="footer__bottom">
           <p className="footer__copyright">
-            © {currentYear} Ijaz Ahmad Afridi. All rights reserved.
+            © {currentYear} Ijaz Ahmad. All rights reserved.
           </p>
           <p className="footer__credit">
             Designed & Built with <span className="footer__heart">♥</span> using React

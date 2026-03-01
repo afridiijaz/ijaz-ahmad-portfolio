@@ -234,6 +234,12 @@
   cursor: default;
 }
 
+.contact__form-error {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
 /* ============================================
    CTA SECTION
    ============================================ */

@@ -50,8 +50,8 @@ const projects = [
       'User Authentication',
     ],
     period: 'Sep 2024 – Dec 2024',
-    liveUrl: null,
-    githubUrl: 'https://github.com/ijaz-ahmad-afridi/travelnest',
+    liveUrl: 'https://travelnest-6zeq.onrender.com/',
+    githubUrl: 'https://github.com/afridiijaz/travelNest',
     image: null,
     color: '#6B1D2A',
   },
@@ -137,7 +137,7 @@ const Projects = () => {
 
   return (
     <section className="projects">
-      {/* Hero Banner */}
+     
       <div className="projects__hero section-dark">
         <div className="container">
           <motion.div
@@ -157,7 +157,6 @@ const Projects = () => {
         </div>
       </div>
 
-      {/* Filter Tabs */}
       <div className="projects__filters section">
         <div className="container">
           <motion.div

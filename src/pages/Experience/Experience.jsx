@@ -86,7 +86,7 @@ const certificates = [
       'Learned core Angular concepts like components, modules, and services.',
       'Built responsive single-page applications using Angular CLI.',
     ],
-    link: '#',
+    link: 'https://drive.google.com/file/d/1Acjo5ZBwLgVrCf4Gl2vEgeMG0fnqIV_d/view',
   },
   {
     title: 'Introduction to Front-end Development with ReactJS',
@@ -96,7 +96,7 @@ const certificates = [
       'Understood key React concepts like components, props, and state management.',
       'Built interactive user interfaces using JSX and component-based architecture.',
     ],
-    link: '#',
+    link: 'https://drive.google.com/file/d/1sAt-SAhVUxfNXuC_LtRKRAfsvVIxCxz_/view',
   },
   {
     title: 'APIs in Node.js: Write a RESTful API Backend Application',
@@ -106,7 +106,7 @@ const certificates = [
       'Designed and built RESTful APIs with Express.js.',
       'Explored component lifecycle and rendering concepts.',
     ],
-    link: '#',
+    link: 'https://drive.google.com/file/d/1sAt-SAhVUxfNXuC_LtRKRAfsvVIxCxz_/view',
   },
 ];
 
