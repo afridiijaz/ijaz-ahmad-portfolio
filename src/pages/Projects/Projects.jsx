@@ -8,6 +8,7 @@ import {
   FaNodeJs,
   FaDatabase,
   FaCloudUploadAlt,
+  FaCode,
 } from 'react-icons/fa';
 import {
   SiMongodb,
@@ -150,6 +151,30 @@ const projects = [
     githubUrl: 'https://github.com/afridiijaz/websocket',
     image: null,
     color: '#1D3A6B',
+  },
+  {
+    id: 6,
+    title: 'QuizMaster',
+    tagline: 'Interactive Knowledge Challenge App',
+    description:
+      'A feature-rich quiz application built with vanilla JavaScript, featuring a 5-minute countdown timer, skip & review system, real-time progress tracking, and dynamic score feedback — all without any framework.',
+    tags: ['Frontend'],
+    tech: [
+      { name: 'HTML5', icon: <FaCode /> },
+      { name: 'CSS3', icon: <FaCode /> },
+      { name: 'JavaScript', icon: <FaServer /> },
+    ],
+    features: [
+      'Countdown Timer',
+      'Skip & Review System',
+      'Dynamic Score Feedback',
+      'Progress Tracking',
+    ],
+    period: '2024',
+    liveUrl: 'https://afridiijaz.github.io/QuizApp/',
+    githubUrl: 'https://github.com/afridiijaz/QuizApp',
+    image: null,
+    color: '#1A5C3A',
   },
 ];
 
