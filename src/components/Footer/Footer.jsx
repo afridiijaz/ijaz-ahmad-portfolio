@@ -83,7 +83,7 @@ const Footer = () => {
             © {currentYear} Ijaz Ahmad. All rights reserved.
           </p>
           <p className="footer__credit">
-            Designed & Built with <span className="footer__heart">♥</span> using React
+            Designed & Built with <span className="footer__heart">♥</span> by <span className="footer__logo-accent">Ijaz Ahmad</span>
           </p>
         </div>
       </div>

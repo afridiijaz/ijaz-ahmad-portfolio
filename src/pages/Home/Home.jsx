@@ -62,10 +62,6 @@ const Home = () => {
       <div className="hero__bg-circle hero__bg-circle--1"></div>
       <div className="hero__bg-circle hero__bg-circle--2"></div>
 
-      {/* Sparkle Stars */}
-      <div className="hero__sparkle hero__sparkle--1"></div>
-      <div className="hero__sparkle hero__sparkle--2"></div>
-
       <div className="hero__container container">
         <div className="hero__content">
           {/* Left Content */}

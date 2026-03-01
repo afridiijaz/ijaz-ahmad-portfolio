@@ -96,7 +96,7 @@ const certificates = [
       'Understood key React concepts like components, props, and state management.',
       'Built interactive user interfaces using JSX and component-based architecture.',
     ],
-    link: 'https://drive.google.com/file/d/1sAt-SAhVUxfNXuC_LtRKRAfsvVIxCxz_/view',
+    link: 'https://drive.google.com/file/d/1AfuwY4MV6YN3PufsOLidKqY0u5SVEKsC/view?usp=sharing',
   },
   {
     title: 'APIs in Node.js: Write a RESTful API Backend Application',
