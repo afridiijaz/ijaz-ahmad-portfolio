@@ -176,6 +176,31 @@ const projects = [
     image: null,
     color: '#1A5C3A',
   },
+  {
+    id: 7,
+    title: 'Gesture Particles 3D',
+    tagline: 'Control 3D Particle Universes with Your Hands',
+    description:
+      'A mesmerizing 3D particle visualization that responds to real-time hand gestures via webcam. Built with Three.js and hand-tracking AI, users can sculpt, rotate, and recolor particle formations using nothing but their hands.',
+    tags: ['Frontend'],
+    tech: [
+      { name: 'Three.js', icon: <FaCode /> },
+      { name: 'JavaScript', icon: <FaServer /> },
+      { name: 'Hand Tracking', icon: <FaCode /> },
+      { name: 'WebGL', icon: <FaCode /> },
+    ],
+    features: [
+      'Real-Time Hand Tracking',
+      'Three.js 3D Rendering',
+      'Dynamic Particle System',
+      'Color Themes & Controls',
+    ],
+    period: '2024',
+    liveUrl: 'https://afridiijaz.github.io/gesture-particles-3d/',
+    githubUrl: 'https://github.com/afridiijaz/gesture-particles-3d',
+    image: null,
+    color: '#2D1B69',
+  },
 ];
 
 const Projects = () => {
@@ -344,7 +369,7 @@ const Projects = () => {
               open-source work.
             </p>
             <a
-              href="https://github.com/ijaz-ahmad-afridi"
+              href="https://github.com/afridiijaz"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-light"
