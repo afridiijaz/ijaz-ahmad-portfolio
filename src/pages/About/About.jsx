@@ -77,7 +77,11 @@ const About = () => {
             >
               <div className="about__image-card">
                 <div className="about__image-placeholder">
-                  <span className="about__image-initials">IA</span>
+                  <img
+                    src="/ijazprofile.jpeg"
+                    alt="Ijaz Ahmad"
+                    className="about__image-photo"
+                  />
                 </div>
                 <div className="about__image-accent"></div>
               </div>
@@ -108,7 +112,7 @@ const About = () => {
               variants={fadeInUp}
             >
               <h3 className="about__name">
-                Ijaz Ahmad <span className="about__name-accent">Afridi</span>
+                Ijaz <span className="about__name-accent">Ahmad</span>
               </h3>
               <p className="about__role">Full Stack Developer (MERN Stack)</p>
 
@@ -149,7 +153,7 @@ const About = () => {
 
               {/* Actions */}
               <div className="about__actions">
-                <a href="/resume.pdf" download className="btn btn-primary">
+                <a href="/Ijaz_Ahmad_CV.pdf" download="Ijaz_Ahmad_CV.pdf" className="btn btn-primary">
                   <FaDownload /> Download CV
                 </a>
                 <Link to="/contact" className="btn btn-outline">
